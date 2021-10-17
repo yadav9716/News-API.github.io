@@ -97,26 +97,3 @@ function getData() {
 }
 
 getData()
-
-let search = document.getElementById("searchTxt");
-// let i=0;
-search.addEventListener('input', function () {
-    let inputVal = search.value.toLowerCase();
-    // console.log('Input event fired!', inputVal);
-    let accordion = document.getElementById("content");
-    let noteCards = document.getElementsByClassName('noteCards');
-    Array.from(noteCards).forEach(function(element){
-        let i=0;
-        let cardTxt = title[i];
-        console.log(title[i])
-        if(cardTxt.includes(inputVal)){
-            element.style.display = "block";
-        }
-        else{
-            element.style.display = "none";
-        }
-        i++;
-        // console.log(cardTxt);
-    })
-});
-
