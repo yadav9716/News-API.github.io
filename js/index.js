@@ -17,7 +17,6 @@ let minutes;
 let seconds;
 
 // For search news
-let title = new Array();
 let i = 0;
 let time = setInterval(() => {
     timer.setSeconds(timer.getSeconds() - 1);
@@ -71,11 +70,8 @@ function getData() {
         console.log("Inside second then");
         let articles = data.articles;
         articles.forEach(function(element, index) {
-            // console.log(element,index)
-            title[i] = element.title;
-            // console.log(title[i]);
             let news = `
-                        <div class="accordion-item noteCards">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="heading${index}">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
                             <b>Breaking News ${index+1}: </b> ${element["title"]}
