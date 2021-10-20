@@ -1,7 +1,7 @@
 // https://dummyapi.io/data/v1/user?limit=10
 
 let source = 'bbc-news';
-let apiKey = 'f99a4e7d83aa4ccca60b6bc328283a00';
+let apiKey = '7aaf3cfa14444a4ba931cb55a6581cfb';
 let newsAccordion = document.getElementById("newsAccordion");
 let newsHTML = "";
 
@@ -62,7 +62,8 @@ let time = setInterval(() => {
 let countDown = document.getElementById("countDown");
 
 function getData() {
-    url = `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`;
+    url = `
+    https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`;
     console.log("Started getData")
     fetch(url).then((response)=>{
         console.log("Inside first then");
